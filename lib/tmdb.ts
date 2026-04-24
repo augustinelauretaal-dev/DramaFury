@@ -93,7 +93,7 @@ export async function getLatestKDramas(page = 1): Promise<Drama[]> {
     page: String(page),
     "vote_count.gte": "5",
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Top K-dramas by popularity */
@@ -104,7 +104,7 @@ export async function getTopKDramas(page = 1): Promise<Drama[]> {
     page: String(page),
     "vote_count.gte": "20",
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Top C-dramas by popularity */
@@ -115,7 +115,7 @@ export async function getTopCDramas(page = 1): Promise<Drama[]> {
     page: String(page),
     "vote_count.gte": "10",
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Popular Hollywood TV shows */
@@ -127,7 +127,7 @@ export async function getHollywood(page = 1): Promise<Drama[]> {
     page: String(page),
     "vote_count.gte": "50",
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Japanese anime — genre 16 = Animation */
@@ -139,7 +139,7 @@ export async function getAnime(page = 1): Promise<Drama[]> {
     page: String(page),
     "vote_count.gte": "20",
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Upcoming K-dramas — airing in the next 90 days */
@@ -155,7 +155,7 @@ export async function getUpcomingKDramas(): Promise<Drama[]> {
     "first_air_date.gte": fmt(today),
     "first_air_date.lte": fmt(future),
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 /** Top-rated K-dramas */
@@ -166,7 +166,7 @@ export async function getTopRatedKDramas(page = 1): Promise<Drama[]> {
     "vote_count.gte": "100",
     page: String(page),
   });
-  return data.results.slice(0, 16);
+  return data.results.slice(0, 21);
 }
 
 // ─── Detail Pages ─────────────────────────────────────────────────────────────
