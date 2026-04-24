@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
   // Turbopack is the default bundler in Next.js 16.
   // No extra config needed — it just works.
 
-  // Enable React Compiler (stable in Next.js 16)
-  reactCompiler: true,
+  // React Compiler disabled - requires babel-plugin-react-compiler
+  // reactCompiler: true,
 };
 
 export default nextConfig;
